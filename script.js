@@ -18,12 +18,13 @@ const h1 = document.querySelector("h1");
 for (let button of buttons) {
   button.addEventListener(
     "click",
-    function () {
-      button.style.backgroundColor =
-        newColor();
-      button.style.color = newColor();
-      h1.innerText =
-        "Button-Insanity-Begins";
-    }
+    colorize
   );
+}
+
+function colorize() {
+  this.style.backgroundColor =
+    newColor();
+  this.style.color = newColor();
+  this.innerText = "I am insane";
 }
