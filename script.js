@@ -13,10 +13,18 @@ const newColor = function () {
 
 const buttons =
   document.querySelectorAll("button");
-const h1 = document.querySelector("h1");
+const h1s =
+  document.querySelectorAll("h1");
 
 for (let button of buttons) {
   button.addEventListener(
+    "click",
+    colorize
+  );
+}
+
+for (let h1 of h1s) {
+  h1.addEventListener(
     "click",
     colorize
   );
